@@ -1,0 +1,16 @@
+{
+  "name": "capstone-travel-app",
+  "version": "1.0.0",
+  "description": "Responsive travel app which utilizes multiple APIs to deliver targeted travel information to the user",
+  "main": "index.js",
+  "scripts": {
+  	"start": "browser-sync start -s -w *.js *.html *.css --index index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016Travel-App"
+  },
+  "author": "Hendrik W.",
+  "license": "ISC"
+}
