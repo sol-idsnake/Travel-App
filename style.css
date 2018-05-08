@@ -13,3 +13,17 @@ fieldset {
 	margin: 0;
 	padding: 0;
 }
+
+input[type="text"] {
+    font-size: 100%;
+    margin: 0 .5em .5em 0;
+    width: 15em;
+}
+
+button {
+	font-size: 100%;
+}
+
+.radioChecks {
+	margin: 0 0 .5em 0;
+}
