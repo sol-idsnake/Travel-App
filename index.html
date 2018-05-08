@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="name">
+	<meta name="description" content="...">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Api Hack Capstone</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<header class="header" role='navigation'>
+		<form action="#">
+			<fieldset>
+				<label for='cityInput'></label>
+				<input id='cityInput' type='text' name='cityInput' placeholder='Enter a city' required>
+				<div class="radioChecks">
+					<input type='checkbox' value="Maps" id="maps">
+					<label for='maps'>Maps</label>
+					<input type='checkbox' value="wikipedia" id="wikipedia">
+					<label for='maps'>Wikipedia</label>
+					<input type='checkbox' value="Zomato" id="zomato">
+					<label for='maps'>Zomato</label>
+					<input type='checkbox' value="Weater" id="weather">
+					<label for='weather'>Weather</label>
+				</div>
+				<button role='submit'>Submit</button>
+			</fieldset>
+		</form>
+	</header>
+
+	<main role='content'>
+		<div class="googleMaps"></div>
+		<div class="wikipedia"></div>
+		<div class="zomato"></div>
+	</main>
+
+
+	<script src="index.js"></script>
+</body>
+</html>
