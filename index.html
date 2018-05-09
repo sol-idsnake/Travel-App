@@ -12,19 +12,19 @@
 <body>
 
 	<header class="header" role='navigation'>
-		<form action="#">
+		<form action="#" class="js-form">
 			<fieldset>
 				<label for='cityInput'></label>
 				<input id='cityInput' type='text' name='cityInput' placeholder='Enter a city' required>
 				<i class="far fa-times-circle"></i>
 				<div class="radioChecks">
-					<input type='checkbox' value="Maps" id="maps">
+					<input type='checkbox' value="Maps" id="maps" checked>
 					<label for='maps'>Maps</label>
-					<input type='checkbox' value="wikipedia" id="wikipedia">
+					<input type='checkbox' value="wikipedia" id="wikipedia" checked>
 					<label for='maps'>Wikipedia</label>
-					<input type='checkbox' value="Zomato" id="zomato">
+					<input type='checkbox' value="Zomato" id="zomato" checked>
 					<label for='maps'>Zomato</label>
-					<input type='checkbox' value="Weater" id="weather">
+					<input type='checkbox' value="Weater" id="weather" checked>
 					<label for='weather'>Weather</label>
 				</div>
 				<button role='submit'>Submit</button>
@@ -32,13 +32,15 @@
 		</form>
 	</header>
 
-	<main role='content'>
-		<div class="googleMaps"></div>
-		<div class="wikipedia"></div>
-		<div class="zomato"></div>
+	<main role='content' class="main" hidden>
+		<div class="googleMaps" hidden></div>
+		<div class="wikipedia" hidden></div>
+		<div class="zomato" hidden></div>
 	</main>
 
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATakAmdToENDu2ttZjIWr71_E-pPylYEs"></script>
 	<script src="index.js"></script>
 </body>
 </html>
