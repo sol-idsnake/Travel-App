@@ -24,6 +24,18 @@ button {
 	font-size: 100%;
 }
 
+main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main > div {
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
+}
+
 .radioChecks {
 	margin: 0 0 .5em 0;
 }
@@ -31,9 +43,15 @@ button {
 .googleMaps {
 	height: 400px;
 	width: 100%;
+	flex: 1 1 100%;
 }
 
 .wikipedia {
 	height: 400px;
-	width: 50%;
+	/*width: 50%;*/
+	flex: 0 1 50%;
+}
+
+.weather {
+	flex: 0 1 50%;
 }
