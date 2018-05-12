@@ -44,6 +44,7 @@ function fetchMap(city, callback){
 // Render google map
 function renderMap(data){
 	$('.greeting').hide()
+	$('main').css('display', 'flex')
 	$('.googleMaps').show()
 
 	const lat = data.results[0].geometry.location.lat
@@ -88,6 +89,7 @@ function fetchWiki(city, callback){
 // Render wikipedia DIV
 function renderWiki(data){
 	$('.greeting').hide()
+	$('main').css('display', 'flex')
 	$('.wikipedia').show()
 	$('.wikipedia').html(`
 		<h1>${data.query.pages["0"].title}</h1>
@@ -134,6 +136,7 @@ function getCityByLatLong(result){
 // Render weather DIV via city ID
 function renderWeather(data) {
 	$('.greeting').hide()
+	$('main').css('display', 'flex')
 	$('.weather').show()
 
 	var temp = `${data.main.temp}`.substr(0, 2)
@@ -185,6 +188,7 @@ function fetchZomatoInfo(cityId) {
 // Render Zomato DIV, fill with list of restaurants
 function renderZomato(data){
 	$('.greeting').hide()
+	$('main').css('display', 'flex')
 	$('.zomato').show()
 	$('.js-list').show()
 	$('.js-list').find('li').remove()
