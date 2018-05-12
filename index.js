@@ -1,13 +1,8 @@
-$(startApp)
+$(inputListener)
 
-let lat = ''
-let long = ''
-
-function startApp(){
-	inputListener()
-}
-
+// Google autocomplete feature & form submit event listener
 function inputListener(){
+	// Google autocomplete feature
 	var options = {
 		types: ['(cities)'],
 		componentRestrictions: {country: "us"}
@@ -15,35 +10,21 @@ function inputListener(){
 	var input = document.getElementById('cityInput')
 	new google.maps.places.Autocomplete(input, options);
 
+
+	// event listener
 	$('.js-form').submit(event => {
 		event.preventDefault()
 
-		// cleanSite()
-
 		const input = $('#cityInput').val()
 
-		fetchMap(input, updateLatLong)
+		fetchMap(input, renderMap)
 		fetchWiki(input, renderWiki)
-		fetchWeatherCity(input, renderWeather)
+		fetchWeatherCity(input)
 		fetchZomato(input)
 	})
 }
 
-function cleanSite(){
-	// const greet = `${'.greeting'}`
-	if ($('.greet').prop('hidden') === true ){
-		lat = ''
-		long = ''
-
-		$('.greeting').show()
-		$('.main').hide()	
-		$('.googleMaps').hide()
-		$('.wikipedia').hide()
-		$('.weather').hide()
-		$('.zomato').hide()
-	}
-}
-
+// Handle Map API call
 function fetchMap(city, callback){
 	if ($('#maps').prop('checked')) {		
 		const query = {
@@ -60,16 +41,13 @@ function fetchMap(city, callback){
 	}
 }
 
-function updateLatLong(data){
-	lat = data.results[0].geometry.location.lat
-	long = data.results[0].geometry.location.lng
-
-	renderMap(lat, long)
-}
-
-function renderMap(lat, long){
+// Render google map
+function renderMap(data){
 	$('.greeting').hide()
 	$('.googleMaps').show()
+
+	const lat = data.results[0].geometry.location.lat
+	const long = data.results[0].geometry.location.lng
 
 	var uluru = {lat: lat, lng: long};
 	var map = new google.maps.Map(document.querySelector('.googleMaps'), {
@@ -82,6 +60,7 @@ function renderMap(lat, long){
 	});	
 }
 
+// Handle Wikipedia API call
 function fetchWiki(city, callback){
 	if ($('#wikipedia').prop('checked')) {
 		const cityUsa = city.slice(0, -5)
@@ -106,6 +85,7 @@ function fetchWiki(city, callback){
 	}
 }
 
+// Render wikipedia DIV
 function renderWiki(data){
 	$('.greeting').hide()
 	$('.wikipedia').show()
@@ -115,16 +95,18 @@ function renderWiki(data){
 	`)
 }
 
-function fetchWeatherCity(city, callback){
+// Handle weather API / get coordinates
+function fetchWeatherCity(city){
 	if ($('#weather').prop('checked')) {
 		const cityUsa = city.slice(0, -5)
+		
 		const query = {
-			url: `https://api.openweathermap.org/data/2.5/weather`,
+			url: 'https://maps.googleapis.com/maps/api/geocode/json',
 			data: {
-				q: cityUsa,
-				appid: '5e5df2be1d3b2a169cf5895f07e31d61',
+				address: city,
+				key: 'AIzaSyATakAmdToENDu2ttZjIWr71_E-pPylYEs'
 			},
-			success: callback
+			success: getCityByLatLong
 		}
 		$.ajax(query)
 	} else {
@@ -132,6 +114,24 @@ function fetchWeatherCity(city, callback){
 	}
 }
 
+// Get city ID by coordinates
+function getCityByLatLong(result){
+	const lat = result.results[0].geometry.location.lat
+	const long = result.results[0].geometry.location.lng
+
+	const query = {
+		url: `https://api.openweathermap.org/data/2.5/weather`,
+		data: {
+			lat: lat,
+			lon: long,
+			appid: '5e5df2be1d3b2a169cf5895f07e31d61',
+		},
+		success: renderWeather
+	}
+	$.ajax(query)
+}
+
+// Render weather DIV via city ID
 function renderWeather(data) {
 	$('.greeting').hide()
 	$('.weather').show()
@@ -140,14 +140,17 @@ function renderWeather(data) {
 
 	$('.weather').html(`
 		<h1>Weather for ${data.name}</h1>
-		<p>Currently ${data.weather["0"].description} in ${data.name}, at ${temp} &deg;C.</p>
+		<p>Currently ${data.weather["0"].description} in ${data.name}, at ${temp} &deg;C.</p><br>
 		<p>Wind speeds of ${data.wind.speed} mph, with ${data.main.humidity}% humidity.</p>
 	`)
 }
 
+// Handle Zomato API call
 function fetchZomato(city) {
 	if ($('#zomato').prop('checked')) {
+
 		const cityUsa = city.slice(0, -5)
+
 		const queryFirst = {
 			url: 'https://developers.zomato.com/api/v2.1/cities',
 			beforeSend: function(xhr){xhr.setRequestHeader('user-key', '1aa61e0bfadfad8ac936849e8fe6ce25')},
@@ -162,13 +165,14 @@ function fetchZomato(city) {
 	}
 }
 
-function fetchZomatoInfo(result) {
+// Get list of restaurant recommendations via City ID
+function fetchZomatoInfo(cityId) {
 	const query = {
 		url: 'https://developers.zomato.com/api/v2.1/search',
 		beforeSend: function(xhr){xhr.setRequestHeader('user-key', '1aa61e0bfadfad8ac936849e8fe6ce25')},
 		data: {
 			'entity_type': 'city',
-			'entity_id': result.location_suggestions[0].id,
+			'entity_id': cityId.location_suggestions[0].id,
 			count: 10,
 			radius: 15,
 			sort: 'rating',
@@ -178,6 +182,7 @@ function fetchZomatoInfo(result) {
 	$.ajax(query)
 }
 
+// Render Zomato DIV, fill with list of restaurants
 function renderZomato(data){
 	$('.greeting').hide()
 	$('.zomato').show()
