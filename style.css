@@ -32,13 +32,13 @@ fieldset {
 
 input[type="search"] {
     font-size: 100%;
-    margin: 0 .5em .5em 0;
-    width: 15em;
+    margin: 0 0 .5em 0;
+    width: 315px;
 }
 
 button {
 	font-size: 100%;
-	width: 15em;
+	width: 315px;
 }
 
 main {
@@ -77,22 +77,24 @@ li {
 }
 
 .controls {
+	align-items: center;
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
 }
 
-.test {
+.searchInput {
+	align-items: center;	
+	display: flex;
 	display: inline-block;
 	flex: 1 1 50%;
-	display: flex;
-	align-items: center;	
 	justify-content: flex-end;
 }
 .radioChecks {
-	margin: 0 0 .5em 0;
 	flex: 1 1 50%;
+	margin: 0 0 .5em 0;
+	width: 315px;
 }
 
 .googleMaps {
