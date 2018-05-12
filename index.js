@@ -2,7 +2,6 @@ $(startApp)
 
 function startApp(){
 	inputListener()
-	inputEraser()
 }
 
 function inputListener(){
@@ -26,12 +25,6 @@ function inputListener(){
 		fetchWiki(input, renderWiki)
 		fetchWeatherCity(input, renderWeather)
 		fetchCityId(input)
-	})
-}
-
-function inputEraser(){
-	$('.fa-times-circle').on('click', () => {
-		$('#cityInput').val('').focus()
 	})
 }
 
