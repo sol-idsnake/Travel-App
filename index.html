@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Api Hack Capstone</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Slab:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -21,14 +22,14 @@
 					</div>
 
 					<div class="radioChecks">
-						<input type='checkbox' value="Maps" id="maps" >
+						<input type='checkbox' value="maps" id="maps" >
 						<label for='maps'>Maps</label>
 						<input type='checkbox' value="wikipedia" id="wikipedia" >
-						<label for='maps'>Wikipedia</label>
-						<input type='checkbox' value="Weater" id="weather" >
+						<label for='wikipedia'>Wikipedia</label>
+						<input type='checkbox' value="weather" id="weather" >
 						<label for='weather'>Weather</label>
-						<input type='checkbox' value="Zomato" id="zomato" >
-						<label for='maps'>Zomato</label>
+						<input type='checkbox' value="zomato" id="zomato" >
+						<label for='zomato'>Zomato</label>
 					</div>
 
 					<button role='submit'>Submit</button>
@@ -48,16 +49,15 @@
 	</div>
 
 	<main role='content' class="main" hidden>
-		<div class="googleMaps" hidden></div>
 		<div class="wikipedia" hidden></div>
 		<div class="weather" hidden></div>
+		<div class="googleMaps" hidden></div>
 		<div class="zomato" hidden><ul class="js-list" hidden></ul></div>
 	</main>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATakAmdToENDu2ttZjIWr71_E-pPylYEs&libraries=places"></script>
-	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATakAmdToENDu2ttZjIWr71_E-pPylYEs"></script> -->
 	<script src="index.js"></script>
 </body>
 </html>
