@@ -8,13 +8,29 @@ body {
   box-sizing: border-box;
 }
 
+h1, h3 {
+	font-family: 'Lato', sans-serif;
+}
+
+h3 {
+	display: inline;
+}
+
+p, span {
+	font-family: 'Roboto Slab', serif;
+}
+
+header {
+	margin: 1em 0 0 0;
+}
+
 fieldset {
 	border: none;
 	margin: 0;
 	padding: 0;
 }
 
-input[type="text"] {
+input[type="search"] {
     font-size: 100%;
     margin: 0 .5em .5em 0;
     width: 15em;
@@ -22,36 +38,93 @@ input[type="text"] {
 
 button {
 	font-size: 100%;
+	width: 15em;
 }
 
 main {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 2em 0 0 0;
 }
 
 main > div {
-	/*display: flex;*/
-	/*flex-direction: column;*/
-	/*align-items: center;*/
-	/*justify-content: center;*/
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 }
 
+img {
+	height: 300px;
+	width: 300px;
+}
+
+li {
+	border: 1px solid gray;
+	margin: .5em .5em;
+	padding: 1em;
+	width: 15em;
+}
+
+.greeting {
+	display: flex;
+	justify-content: center;
+	margin: 2em 0 0 0;
+}
+
+.left {
+	padding: 3em 0 0 0;
+	width: 300px;
+}
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.test {
+	display: inline-block;
+	flex: 1 1 50%;
+	display: flex;
+	align-items: center;	
+	justify-content: flex-end;
+}
 .radioChecks {
 	margin: 0 0 .5em 0;
+	flex: 1 1 50%;
 }
 
 .googleMaps {
+	flex: 1 1 100%;
 	height: 400px;
 	width: 100%;
-	flex: 1 1 100%;
 }
 
 .wikipedia {
-	height: 400px;
-	/*width: 50%;*/
 	flex: 0 1 50%;
+	padding: 0 2em;
 }
 
 .weather {
 	flex: 0 1 50%;
+}
+
+
+.zomato {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.js-list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 0;
+}
+
+.dollar {
+	color: green;
+	font-weight: 700;
 }

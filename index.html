@@ -6,7 +6,7 @@
 	<meta name="description" content="...">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Api Hack Capstone</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Slab:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -14,28 +14,44 @@
 	<header class="header" role='navigation'>
 		<form action="#" class="js-form">
 			<fieldset>
-				<label for='cityInput'></label>
-				<input id='cityInput' type='text' name='cityInput' placeholder='Enter a city' required>
-				<i class="far fa-times-circle"></i>
-				<div class="radioChecks">
-					<input type='checkbox' value="Maps" id="maps" checked>
-					<label for='maps'>Maps</label>
-					<input type='checkbox' value="wikipedia" id="wikipedia" checked>
-					<label for='maps'>Wikipedia</label>
-					<input type='checkbox' value="Zomato" id="zomato" checked>
-					<label for='maps'>Zomato</label>
-					<input type='checkbox' value="Weater" id="weather" checked>
-					<label for='weather'>Weather</label>
+				<div class="controls">
+					<div class='test'>
+					<label for='cityInput'></label>
+					<input id='cityInput' type='search' name='cityInput' placeholder='Enter a city' required>
+					</div>
+
+					<div class="radioChecks">
+						<input type='checkbox' value="Maps" id="maps" checked>
+						<label for='maps'>Maps</label>
+						<input type='checkbox' value="wikipedia" id="wikipedia" checked>
+						<label for='maps'>Wikipedia</label>
+						<input type='checkbox' value="Zomato" id="zomato" checked>
+						<label for='maps'>Zomato</label>
+						<input type='checkbox' value="Weater" id="weather" checked>
+						<label for='weather'>Weather</label>
+					</div>
+
+					<button role='submit'>Submit</button>
 				</div>
-				<button role='submit'>Submit</button>
 			</fieldset>
 		</form>
 	</header>
+
+	<div class="greeting">
+		<div class="left">
+			<h1>AggreGator</h1>
+			<p>Enter a city of your choice and learn about entertainment, current weather episodes, and history.</p>
+		</div>
+		<div class="right">
+			<img src="https://clipartimage.net/wp-content/uploads/2017/07/dc9XBBEqi.jpg" alt="Aggregator front page logo of a drawn alligator">
+		</div>
+	</div>
 
 	<main role='content' class="main" hidden>
 		<div class="googleMaps" hidden></div>
 		<div class="wikipedia" hidden></div>
 		<div class="weather" hidden></div>
+		<div class="zomato" hidden><ul class="js-list" hidden></ul></div>
 	</main>
 
 
