@@ -1,5 +1,9 @@
 body {
 	margin: 0;
+	background-attachment: fixed;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23a4ff9c'/%3E%3Cstop offset='1' stop-color='%23458eff'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
 }
 
 *,
@@ -23,7 +27,7 @@ p, span {
 }
 
 header {
-	/*background: #ede9ce;*/
+	margin-bottom: 2em;
 	padding: 1em 0 0 0;
 }
 
@@ -34,6 +38,7 @@ fieldset {
 }
 
 input[type="search"] {
+	padding: .5em;
     font-size: 100%;
     margin: 0 0 .5em 0;
     width: 315px;
@@ -41,12 +46,17 @@ input[type="search"] {
 
 button {
 	font-size: 100%;
+	font-weight: 700;
+	letter-spacing: .1em;
+	outline: none;
+	padding: .5em 0;    
 	width: 315px;
 }
 
 main {
 	display: none;
 	flex-wrap: wrap;
+	justify-content: space-around;
 	margin: 0 0 0 0;
 }
 
@@ -57,31 +67,37 @@ main > div {
 }
 
 img {
-	height: 300px;
-	width: 300px;
+	height: 250px;
+	margin: 1em 0;
+	width: 250px;
 }
 
 li {
-	/*background: #64706c;*/
+	background: rgba(255, 255, 255, 0.8);
 	border: 1px solid gray;
-	/*color: white;*/
 	margin: .5em .5em;
 	padding: 1em;
 	width: 15em;
 }
 
-i {
-	display: inline-block;
+svg {
+	margin-right: .3em;
 }
 
 .greeting {
+	background: white;
 	display: flex;
 	justify-content: center;
-	margin: 2em 0 0 0;
+	margin: 2em auto 0 auto;
+	width: 55%;
 }
 
 .left {
-	padding: 3em 0 0 0;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 2em 0 0;
 	width: 300px;
 }
 
@@ -93,13 +109,6 @@ i {
 	justify-content: center;
 }
 
-.searchInput {
-	align-items: center;	
-	display: flex;
-	display: inline-block;
-	flex: 1 1 50%;
-	justify-content: flex-end;
-}
 .radioChecks {
 	flex: 1 1 50%;
 	margin: 0 0 .5em 0;
@@ -114,14 +123,15 @@ i {
 }
 
 .wikipedia {
-	/*background: #c7ad88;*/
-	flex: 0 1 50%;
+	background: rgba(125, 198, 216, 0.85);
+	flex: 0 1 45%;
+	line-height: 1.5em;
 	padding: 2.5em 2em;
 }
 
 .weather {
-	/*background: #935347;*/
-	flex: 0 1 50%;
+	background: rgba(158, 240, 159, 0.85);
+	flex: 0 1 45%;
 	padding: 2.5em 2em;
 }
 
@@ -134,7 +144,9 @@ i {
 .js-list {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	list-style-type: none;
+	margin-top: .5em;
 	padding: 0;
 }
 
@@ -145,7 +157,37 @@ i {
 
 /* Media Queries */
 
-/* All mobile devices - Portrait*/
+/* iPads mini (2,3,4), 1, 2, 3, 4, air, air2, pro 9.7 (landscape) */
+@media only screen and (max-device-width : 1024px) and (orientation: landscape) {}
+
+/* iPads mini (2,3,4), 1, 2, 3, 4, air, air2, pro 9.7 (portrait) */
+@media only screen and (max-device-width : 768px) {
+	img {
+		height: 200px;
+		width: 200px;
+	}
+
+	.greeting {
+		width: 65%;
+	}
+
+	.left {
+		margin: 0;
+		padding: 0 0 0 1em;
+	}
+
+	.right {
+		padding-right: 1em; 
+	}
+}
+
+/* iPhone 6 plus, 7 plus, 8 plus (landscape) */
+@media only screen and (max-width: 736px) and (orientation: landscape){}
+
+/* iPhone 6, 7, 8 (landscape) */
+@media only screen and (max-width: 667px) and (orientation: landscape){}
+
+/* iPhone 6, 7, 8 (portrait) */
 @media only screen and (max-width: 414px) {
 	img {
 		height: 75px;
@@ -153,32 +195,44 @@ i {
 	}
 
 	li {
+		background: rgba(255, 255, 255, 0.85);
 		width: 90%;
 	}
-	
-	.left {
-		margin-top: 1em;
-		padding-top: 0;
-	}	
-	
+
 	.greeting {
 		align-items: center;
 		flex-direction: column-reverse;
+		width: 70%;
 	}	
+	
+	.left {
+		margin: 0;
+		padding: 0 2em 2em 2em;
+	}	
+	
+	.right {
+		padding: 0;
+	}
 
 	.wikipedia {
-		flex: 1 1 100%;
-		padding: .5em 2em;
+		border: 1px solid gray;
+		flex: 0 1 90%;
+		margin: 0 0 1em 0;
+		padding: 1em 1em 2em 1em;
+		text-align: center;
 	}	
 
 	.weather {
-		flex: 1 1 100%;
-		padding: .5em 2em;
+		border: 1px solid gray;
+		flex: 0 1 90%;
+		margin: 0 0 1em 0;
+		padding: 1em 0 2em 0;
+		text-align: center;
 	}	
 
 	.googleMaps {
 		height: 300px;
-		margin: .5em 0;
+		margin: 0;
 	}
 
 	.js-list {
@@ -186,29 +240,58 @@ i {
 	}	
 }
 
-/* iPhone 4 & 5 (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-	button {
-		width: 200px;
+/* iPhone 5 (lanscape) */
+@media only screen and (max-width: 568px) and (orientation: landscape){
+	header {
+		margin-bottom: 1em;
+	}
+
+	.greeting {
+		margin-top: 0;
+		padding-bottom: 1em;
+		width: 90%;
 	}
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) and (max-width: 767px) and (orientation: landscape) {
-	img {
-		height: 75px;
-		margin-top: 2em;
-		width: auto;
+/* iPhone 3, 4, 5 (landscape) ----------- */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+	.greeting {
+		width: 90%;
 	}
 
 	.left {
-		padding: 0;
+		margin-right: 1em;
+	}
+
+	.left > h1 {
+		margin-bottom: .25em;
 	}
 }
 
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-	.wikipedia, .weather {
-		padding-bottom: 1em;
+/* iPhone 3, 4, 5 (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+	input[type="search"] {
+		width: 250px;
+	}
+
+	button {
+		width: 210px;
+	}
+
+	.radioChecks > label {
+		margin: 0 .2em;
+	}
+
+	.radioChecks {
+		display: flex;
+		justify-content: center;
+	}
+
+	.greeting {
+		width: 90%;
+	}
+
+	.left {
+		padding: 0 2.5em 2em;
 	}
 }

@@ -92,7 +92,7 @@ function renderWiki(data){
 	$('main').css('display', 'flex')
 	$('.wikipedia').show()
 	$('.wikipedia').html(`
-		<h1>${data.query.pages["0"].title}</h1>
+		<h1><i class="far fa-building"></i> ${data.query.pages[0].title}</h1>
 		<p>${data.query.pages["0"].extract}</p>
 	`)
 }
@@ -142,7 +142,7 @@ function renderWeather(data) {
 	var temp = `${data.main.temp}`.substr(0, 2)
 
 	$('.weather').html(`
-		<h1>Weather for ${data.name}</h1>
+		<h1><i class="far fa-sun"></i> Weather for ${data.name}</h1>
 		<p>Currently ${data.weather["0"].description} in ${data.name}, at ${temp} &deg;C.</p><br>
 		<p>Wind speeds of ${data.wind.speed} mph, with ${data.main.humidity}% humidity.</p>
 	`)
