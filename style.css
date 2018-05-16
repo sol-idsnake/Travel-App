@@ -116,7 +116,7 @@ svg {
 }
 
 .googleMaps {
-	flex: 1 1 100%;
+	flex: 0 1 90%;
 	height: 400px;
 	margin-top: 1em;
 	width: 100%;
@@ -226,7 +226,7 @@ svg {
 		border: 1px solid gray;
 		flex: 0 1 90%;
 		margin: 0 0 1em 0;
-		padding: 1em 0 2em 0;
+		padding: 1em 1em 2em 1em;
 		text-align: center;
 	}	
 
