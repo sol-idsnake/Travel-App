@@ -22,13 +22,14 @@ Content page:
 ![Content page](img/content-page.png)
 
 ## Built with:
-### HTML 5
-### CSS
-### Javascript
-### jQuery
+### Front-End
+* HTML 5
+* CSS
+* Javascript
+* jQuery
 
 ## APIs from: 
-### Wikipedia
-### Openweathermap
-### Google Maps
-### Zomato
+* Wikipedia
+* Openweathermap
+* Google Maps
+* Zomato
