@@ -21,20 +21,26 @@ h3 {
 	display: inline;
 }
 
-p, span {
+p, span, label {
 	font-family: 'Roboto', serif;
 	margin: 0;
 }
 
 header {
-	margin-bottom: 2em;
-	padding: 1em 0 0 0;
+	background: rgba(0, 0 , 0, .4);
+	color: white;
+	margin: 1em auto 2em auto;
+	width: 315px;
 }
 
 fieldset {
 	border: none;
 	margin: 0;
 	padding: 0;
+}
+
+form {
+	/*background: white;*/
 }
 
 input[type="search"] {
@@ -110,6 +116,7 @@ svg {
 }
 
 .radioChecks {
+	/*background: white;*/
 	flex: 1 1 50%;
 	margin: 0 0 .5em 0;
 	width: 315px;
