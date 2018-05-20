@@ -97,7 +97,7 @@ li {
 }
 
 li > * {
-	margin-bottom: .5em;
+	margin: .5em 0;
 }
 
 svg {
@@ -195,7 +195,6 @@ svg {
 	button {
 		margin: 0;
 	}
-
 }
 
 /* iPhone 6 plus, 7 plus, 8 plus (landscape) */
