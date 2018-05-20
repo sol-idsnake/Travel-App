@@ -151,8 +151,12 @@ function renderWeather(data) {
 // Handle Zomato API call
 function fetchZomato(city) {
 	if ($('#zomato').prop('checked')) {
+		let cityUsa = city.slice(0, -5);
 
-		const cityUsa = city.slice(0, -5);
+		// State of Hawaii fix for API (Api considers whole island, not individual city)
+		if (cityUsa.indexOf("HI") >= 5) {
+			cityUsa = 'Hawaii'
+		}
 
 		const queryFirst = {
 			url: 'https://developers.zomato.com/api/v2.1/cities',
