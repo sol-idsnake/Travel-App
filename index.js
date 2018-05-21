@@ -176,7 +176,6 @@ function fetchZomato(city) {
 
 // Get list of restaurant recommendations via City ID
 function fetchZomatoInfo(cityId) {
-	console.log(cityId)
 	const cityAndStateArray = []
 	const citySelection = cityId.location_suggestions
 
@@ -187,7 +186,6 @@ function fetchZomatoInfo(cityId) {
 
 	// Search for city user input match in the array of results
 	let indexNumber = $.inArray(cityUsa, cityAndStateArray)
-	console.log(indexNumber)
 
 	// API sometimes has differing names (e.g. 'tampa' = 'tampa bay' on API). 
 	// If API city name != user input and exactly 1 match is returned, choose that only result.
