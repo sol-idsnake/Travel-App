@@ -101,7 +101,7 @@ function renderWiki(data){
 function fetchWeatherCity(city){
 	if ($('#weather').prop('checked')) {
 		const cityUsa = city.slice(0, -5);
-		
+		console.log(cityUsa)
 		const query = {
 			url: 'https://maps.googleapis.com/maps/api/geocode/json',
 			data: {
@@ -120,7 +120,7 @@ function fetchWeatherCity(city){
 function getCityByLatLong(result){
 	const lat = result.results[0].geometry.location.lat;
 	const long = result.results[0].geometry.location.lng;
-
+	console.log(lat, long)
 	const query = {
 		url: `https://api.openweathermap.org/data/2.5/weather`,
 		data: {
@@ -138,7 +138,7 @@ function renderWeather(data) {
 	$('.greeting').hide();
 	$('main').css('display', 'flex');
 	$('.weather').show();
-
+	console.log(data)
 	var temp = `${data.main.temp}`.substr(0, 2);
 
 	$('.weather').html(`
@@ -148,11 +148,12 @@ function renderWeather(data) {
 	`);
 }
 
+let cityUsa = ''
 // Handle Zomato API call
 function fetchZomato(city) {
 	if ($('#zomato').prop('checked')) {
-		let cityUsa = city.slice(0, -5);
-
+		cityUsa = city.slice(0, -5);
+		
 		// State of Hawaii fix for API (Api considers whole island, not individual city)
 		if (cityUsa.indexOf("HI") >= 5) {
 			cityUsa = 'Hawaii'
@@ -166,7 +167,8 @@ function fetchZomato(city) {
 			},
 			success: fetchZomatoInfo
 		}
-		$.ajax(queryFirst);
+		// set Timeout function to make cityUsa available for FetchZomatoInfo function
+		setTimeout(function(){$.ajax(queryFirst)}, 300)
 	} else {
 		$('.zomato').hide();
 	};
@@ -174,12 +176,45 @@ function fetchZomato(city) {
 
 // Get list of restaurant recommendations via City ID
 function fetchZomatoInfo(cityId) {
+	console.log(cityId)
+	const cityAndStateArray = []
+	const citySelection = cityId.location_suggestions
+
+	// Push all results into a text array
+	for (let i = 0; i < citySelection.length; i++){
+		cityAndStateArray.push(cityId.location_suggestions[i].name)
+	}
+
+	// Search for city user input match in the array of results
+	let indexNumber = $.inArray(cityUsa, cityAndStateArray)
+	console.log(indexNumber)
+
+	// API sometimes has differing names (e.g. 'tampa' = 'tampa bay' on API). 
+	// If API city name != user input and exactly 1 match is returned, choose that only result.
+	// Else If = If no match is found at all, show error message.
+	if (cityId.location_suggestions.length === 1) {
+		indexNumber = 0
+	} else if (indexNumber === -1) {
+		$(".greeting").hide();
+        $("main").css("display", "flex");
+        $(".zomato").show();
+        $(".js-list").show();
+        $(".js-list").find("li").remove();
+		$(".js-list").append(`
+        	<li>
+			<h3>Sorry</h3>
+			<p>There seem to be no Zomato restaurants in this city.</p>
+			</li>
+        `);
+        return
+	}
+
 	const query = {
 		url: 'https://developers.zomato.com/api/v2.1/search',
 		beforeSend: function(xhr){xhr.setRequestHeader('user-key', '1aa61e0bfadfad8ac936849e8fe6ce25')},
 		data: {
 			'entity_type': 'city',
-			'entity_id': cityId.location_suggestions[0].id,
+			'entity_id': citySelection[indexNumber].id,
 			count: 10,
 			radius: 15,
 			sort: 'rating',
